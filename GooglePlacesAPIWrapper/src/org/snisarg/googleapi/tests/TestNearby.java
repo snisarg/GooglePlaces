@@ -5,7 +5,7 @@ import org.snisarg.googleapi.model.nearby.NearbyWrapper;
 import org.snisarg.googleapi.model.nearby.Results;
 import org.snisarg.googleapi.query.NearbyQuery;
 
-public class Test {
+public class TestNearby {
 
 	public static void main(String[] args) {
 		GooglePlaces gp = new GooglePlaces("key here");

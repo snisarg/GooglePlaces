@@ -3,25 +3,35 @@ package org.snisarg.googleapi;
 import java.io.*;
 import java.net.*;
 
+import org.snisarg.googleapi.model.autocomplete.AutocompleteWrapper;
 import org.snisarg.googleapi.model.nearby.NearbyWrapper;
+import org.snisarg.googleapi.query.AutocompleteQuery;
 import org.snisarg.googleapi.query.NearbyQuery;
 
 import com.google.gson.Gson;
 
 public class GooglePlaces {
 	
+	Gson gson;
 	private String apiKey="key here";
 	
 	public GooglePlaces(String key) {
 		apiKey = key;
+		gson = new Gson();
 	}
 	
 	public NearbyWrapper query(NearbyQuery nearbyQuery) {
 		StringBuffer query = new StringBuffer(nearbyQuery.toString());
 		query.append("&key="+apiKey);
 		System.out.println(query.toString());
-		Gson gson = new Gson();
 		return gson.fromJson(getJSON(query.toString(), 1000000), NearbyWrapper.class);
+	}
+	
+	public AutocompleteWrapper query(AutocompleteQuery autocompleteQuery) {
+		StringBuffer query = new StringBuffer(autocompleteQuery.toString());
+		query.append("&key="+apiKey);
+		System.out.println(query.toString());
+		return gson.fromJson(getJSON(query.toString(), 1000000), AutocompleteWrapper.class);
 	}
 	
 	private String getJSON(String url, int timeout) {
