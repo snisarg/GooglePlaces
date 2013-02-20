@@ -4,8 +4,10 @@ import java.io.*;
 import java.net.*;
 
 import org.snisarg.googleapi.model.autocomplete.AutocompleteWrapper;
+import org.snisarg.googleapi.model.details.DetailsWrapper;
 import org.snisarg.googleapi.model.nearby.NearbyWrapper;
 import org.snisarg.googleapi.query.AutocompleteQuery;
+import org.snisarg.googleapi.query.DetailsQuery;
 import org.snisarg.googleapi.query.NearbyQuery;
 
 import com.google.gson.Gson;
@@ -32,6 +34,13 @@ public class GooglePlaces {
 		query.append("&key="+apiKey);
 		System.out.println(query.toString());
 		return gson.fromJson(getJSON(query.toString(), 1000000), AutocompleteWrapper.class);
+	}
+	
+	public DetailsWrapper query(DetailsQuery detailsQuery) {
+		StringBuffer query = new StringBuffer(detailsQuery.toString());
+		query.append("&key="+apiKey);
+		System.out.println(query.toString());
+		return gson.fromJson(getJSON(query.toString(), 1000000), DetailsWrapper.class);
 	}
 	
 	private String getJSON(String url, int timeout) {

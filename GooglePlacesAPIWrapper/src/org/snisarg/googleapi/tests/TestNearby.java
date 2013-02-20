@@ -8,7 +8,7 @@ import org.snisarg.googleapi.query.NearbyQuery;
 public class TestNearby {
 
 	public static void main(String[] args) {
-		GooglePlaces gp = new GooglePlaces("key here");
+		GooglePlaces gp = new GooglePlaces("Your key here");
 		NearbyWrapper nw = gp.query(new NearbyQuery(19.1146857, 72.8310232));
 		for(Results n : nw.getResults()) {
 			System.out.println(n.getName());

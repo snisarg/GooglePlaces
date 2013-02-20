@@ -8,8 +8,8 @@ import org.snisarg.googleapi.query.AutocompleteQuery;
 public class TestAutocomplete {
 
 	public static void main(String[] args) {
-		GooglePlaces gp = new GooglePlaces("key here");
-		AutocompleteWrapper aw = gp.query(new AutocompleteQuery("Patli").setLatitude(19.1146857).setLongitude(72.8310232).setRadius(90000));
+		GooglePlaces gp = new GooglePlaces("Your key here");
+		AutocompleteWrapper aw = gp.query(new AutocompleteQuery("Kapaswadi").setLatitude(19.1146857).setLongitude(72.8310232).setRadius(90000));
 		for(Predictions p : aw.getPredictions()) {
 			System.out.println(p.getDescription());
 		}
