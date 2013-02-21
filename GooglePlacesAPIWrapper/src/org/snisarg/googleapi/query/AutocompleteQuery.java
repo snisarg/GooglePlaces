@@ -6,7 +6,7 @@ import java.net.URLEncoder;
 public class AutocompleteQuery {
 	
 	StringBuffer query = new StringBuffer("https://maps.googleapis.com/maps/api/place/autocomplete/json?");
-	String input;
+	String input, components;
 	boolean sensor;
 	double latitude, longitude;
 	int radius=500;
@@ -48,12 +48,23 @@ public class AutocompleteQuery {
 		return this;
 	}
 	
+	public String getComponents() {
+		return components;
+	}
+
+	public AutocompleteQuery setComponents(String components) {
+		this.components = components;
+		return this;
+	}
+	
 	public String toString() {
 		query.append("input="+input+"&sensor="+sensor);
 		if(latitude!=0 || longitude!=0)	// Assuming 0 as not set
 			query.append("&location="+latitude+","+longitude);
 		if(radius>0)
 			query.append("&radius="+radius);
+		if(components!=null)
+			query.append("&components="+components);
 		System.out.println(query.toString());
 		return query.toString();
 	}

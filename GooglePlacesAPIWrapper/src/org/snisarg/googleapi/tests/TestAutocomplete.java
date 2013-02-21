@@ -9,7 +9,7 @@ public class TestAutocomplete {
 
 	public static void main(String[] args) {
 		GooglePlaces gp = new GooglePlaces("Your key here");
-		AutocompleteWrapper aw = gp.query(new AutocompleteQuery("Kapaswadi").setLatitude(19.1146857).setLongitude(72.8310232).setRadius(90000));
+		AutocompleteWrapper aw = gp.query(new AutocompleteQuery("coff").setLatitude(19.1146857).setLongitude(72.8310232).setRadius(90000).setComponents("country:in"));
 		for(Predictions p : aw.getPredictions()) {
 			System.out.println(p.getDescription());
 		}
