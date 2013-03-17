@@ -25,21 +25,21 @@ public class GooglePlaces {
 	public NearbyWrapper query(NearbyQuery nearbyQuery) {
 		StringBuffer query = new StringBuffer(nearbyQuery.toString());
 		query.append("&key="+apiKey);
-		System.out.println(query.toString());
+		//System.out.println(query.toString());
 		return gson.fromJson(getJSON(query.toString(), 1000000), NearbyWrapper.class);
 	}
 	
 	public AutocompleteWrapper query(AutocompleteQuery autocompleteQuery) {
 		StringBuffer query = new StringBuffer(autocompleteQuery.toString());
 		query.append("&key="+apiKey);
-		System.out.println(query.toString());
+		//System.out.println(query.toString());
 		return gson.fromJson(getJSON(query.toString(), 1000000), AutocompleteWrapper.class);
 	}
 	
 	public DetailsWrapper query(DetailsQuery detailsQuery) {
 		StringBuffer query = new StringBuffer(detailsQuery.toString());
 		query.append("&key="+apiKey);
-		System.out.println(query.toString());
+		//System.out.println(query.toString());
 		return gson.fromJson(getJSON(query.toString(), 1000000), DetailsWrapper.class);
 	}
 	
@@ -66,7 +66,7 @@ public class GooglePlaces {
 	                    sb.append(line+"\n");
 	                }
 	                br.close();
-	                System.out.println(sb.toString());
+	                //System.out.println(sb.toString());
 	                return sb.toString();
 	        }
 
