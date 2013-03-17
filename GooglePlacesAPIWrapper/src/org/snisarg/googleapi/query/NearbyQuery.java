@@ -64,7 +64,7 @@ public class NearbyQuery {
 			query.append("&radius="+getRadius());
 		if(pagetoken!=null)
 			query.append("&pagetoken="+pagetoken);
-		System.out.println(query.toString());
+		//System.out.println(query.toString());
 		return query.toString();
 	}
 

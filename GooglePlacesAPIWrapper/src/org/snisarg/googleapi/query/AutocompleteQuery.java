@@ -65,7 +65,7 @@ public class AutocompleteQuery {
 			query.append("&radius="+radius);
 		if(components!=null)
 			query.append("&components="+components);
-		System.out.println(query.toString());
+		//System.out.println(query.toString());
 		return query.toString();
 	}
 }
