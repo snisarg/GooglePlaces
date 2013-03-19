@@ -5,7 +5,7 @@ public class Location{
    	private double lat;
    	private double lng;
 
- 	public Number getLat(){
+ 	public double getLat(){
 		return this.lat;
 	}
 	public void setLat(double lat){
