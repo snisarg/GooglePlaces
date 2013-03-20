@@ -1,10 +1,15 @@
 
 package org.snisarg.googleapi.model.details;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class DetailsWrapper{
-   	private List<String> html_attributions;
+public class DetailsWrapper implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<String> html_attributions;
    	private Result result;
    	private String status;
 

@@ -1,10 +1,15 @@
 
 package org.snisarg.googleapi.model.autocomplete;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Predictions{
-   	private String description;
+public class Predictions implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String description;
    	private String id;
    	private List<Matched_substrings> matched_substrings;
    	private String reference;

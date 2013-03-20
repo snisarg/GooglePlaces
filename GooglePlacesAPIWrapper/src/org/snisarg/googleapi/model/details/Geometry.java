@@ -1,8 +1,14 @@
 
 package org.snisarg.googleapi.model.details;
 
-public class Geometry{
-   	private Location location;
+import java.io.Serializable;
+
+public class Geometry implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Location location;
    	private Viewport viewport;
 
  	public Location getLocation(){

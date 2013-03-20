@@ -1,20 +1,28 @@
-
 package org.snisarg.googleapi.model.nearby;
 
-public class Geometry{
-   	private Location location;
-   	private Viewport viewport;
+import java.io.Serializable;
 
- 	public Location getLocation(){
+public class Geometry implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Location location;
+	private Viewport viewport;
+
+	public Location getLocation() {
 		return this.location;
 	}
-	public void setLocation(Location location){
+
+	public void setLocation(Location location) {
 		this.location = location;
 	}
- 	public Viewport getViewport(){
+
+	public Viewport getViewport() {
 		return this.viewport;
 	}
-	public void setViewport(Viewport viewport){
+
+	public void setViewport(Viewport viewport) {
 		this.viewport = viewport;
 	}
 }

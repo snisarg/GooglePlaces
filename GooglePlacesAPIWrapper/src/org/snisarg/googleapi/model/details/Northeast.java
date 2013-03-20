@@ -1,8 +1,14 @@
 
 package org.snisarg.googleapi.model.details;
 
-public class Northeast{
-   	private double lat;
+import java.io.Serializable;
+
+public class Northeast implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private double lat;
    	private double lng;
 
  	public double getLat(){

@@ -1,8 +1,14 @@
 
 package org.snisarg.googleapi.model.autocomplete;
 
-public class Matched_substrings{
-   	private Number length;
+import java.io.Serializable;
+
+public class Matched_substrings implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Number length;
    	private Number offset;
 
  	public Number getLength(){

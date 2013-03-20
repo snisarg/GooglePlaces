@@ -1,57 +1,74 @@
-
 package org.snisarg.googleapi.model.nearby;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Results{
-   	private Geometry geometry;
-   	private String icon;
-   	private String id;
-   	private String name;
-   	private String reference;
-   	private List<String> types;
-   	private String vicinity;
+public class Results implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Geometry geometry;
+	private String icon;
+	private String id;
+	private String name;
+	private String reference;
+	private List<String> types;
+	private String vicinity;
 
- 	public Geometry getGeometry(){
+	public Geometry getGeometry() {
 		return this.geometry;
 	}
-	public void setGeometry(Geometry geometry){
+
+	public void setGeometry(Geometry geometry) {
 		this.geometry = geometry;
 	}
- 	public String getIcon(){
+
+	public String getIcon() {
 		return this.icon;
 	}
-	public void setIcon(String icon){
+
+	public void setIcon(String icon) {
 		this.icon = icon;
 	}
- 	public String getId(){
+
+	public String getId() {
 		return this.id;
 	}
-	public void setId(String id){
+
+	public void setId(String id) {
 		this.id = id;
 	}
- 	public String getName(){
+
+	public String getName() {
 		return this.name;
 	}
-	public void setName(String name){
+
+	public void setName(String name) {
 		this.name = name;
 	}
- 	public String getReference(){
+
+	public String getReference() {
 		return this.reference;
 	}
-	public void setReference(String reference){
+
+	public void setReference(String reference) {
 		this.reference = reference;
 	}
- 	public List<String> getTypes(){
+
+	public List<String> getTypes() {
 		return this.types;
 	}
-	public void setTypes(List<String> types){
+
+	public void setTypes(List<String> types) {
 		this.types = types;
 	}
- 	public String getVicinity(){
+
+	public String getVicinity() {
 		return this.vicinity;
 	}
-	public void setVicinity(String vicinity){
+
+	public void setVicinity(String vicinity) {
 		this.vicinity = vicinity;
 	}
 }

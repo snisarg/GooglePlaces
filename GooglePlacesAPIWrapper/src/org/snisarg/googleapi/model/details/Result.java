@@ -1,10 +1,15 @@
 
 package org.snisarg.googleapi.model.details;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Result{
-   	private List<Address_components> address_components;
+public class Result implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<Address_components> address_components;
    	private String adr_address;
    	private String formatted_address;
    	private Geometry geometry;

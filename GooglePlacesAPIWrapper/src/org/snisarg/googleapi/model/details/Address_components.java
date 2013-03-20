@@ -1,10 +1,15 @@
 
 package org.snisarg.googleapi.model.details;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Address_components{
-   	private String long_name;
+public class Address_components implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String long_name;
    	private String short_name;
    	private List<String> types;
 

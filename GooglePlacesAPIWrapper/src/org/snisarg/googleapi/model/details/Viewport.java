@@ -1,8 +1,14 @@
 
 package org.snisarg.googleapi.model.details;
 
-public class Viewport{
-   	private Northeast northeast;
+import java.io.Serializable;
+
+public class Viewport implements Serializable{
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Northeast northeast;
    	private Southwest southwest;
 
  	public Northeast getNortheast(){

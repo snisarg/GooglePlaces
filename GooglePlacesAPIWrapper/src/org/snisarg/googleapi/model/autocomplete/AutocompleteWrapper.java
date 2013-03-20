@@ -1,11 +1,16 @@
 
 package org.snisarg.googleapi.model.autocomplete;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class AutocompleteWrapper{
+public class AutocompleteWrapper implements Serializable{
 	
-   	private List<Predictions> predictions;
+   	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private List<Predictions> predictions;
    	private String status;
 
  	public List<Predictions> getPredictions(){
