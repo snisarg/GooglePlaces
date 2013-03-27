@@ -1,17 +1,30 @@
 package org.snisarg.googleapi.tests;
 
+import java.io.IOException;
+
 import org.snisarg.googleapi.GooglePlaces;
 import org.snisarg.googleapi.model.details.Address_components;
 import org.snisarg.googleapi.model.details.DetailsWrapper;
 import org.snisarg.googleapi.query.DetailsQuery;
 
+import com.google.gson.JsonSyntaxException;
+
 public class TestDetails {
 
 	public static void main(String[] args) {
 		GooglePlaces gp = new GooglePlaces("Your key here");
-		DetailsWrapper dw = gp.query(new DetailsQuery("CnRwAAAAKKVouLjezXBWYnS5qm-gbpydBcLR1j7VfUA5OJ_O5wI_BYoHc-ea4NmW0HjpVFEkOK4pUR5b8xkeSTB77KWGoVhGpEhbmEd-Qufx8rxnxLhf_eI-WxJ6hgFzrX0FcGQqNZhyRXgalglK24l3bmtFhBIQCK0RuxKzgEo__yp7MvWkNBoUW60gsXqqEqmi5gx_FCjNfCzCa0o"));
-		for( Address_components n : dw.getResult().getAddress_components()) {
-			System.out.println(n.getShort_name());
+		DetailsWrapper dw;
+		try {
+			dw = gp.query(new DetailsQuery("CnRwAAAAKKVouLjezXBWYnS5qm-gbpydBcLR1j7VfUA5OJ_O5wI_BYoHc-ea4NmW0HjpVFEkOK4pUR5b8xkeSTB77KWGoVhGpEhbmEd-Qufx8rxnxLhf_eI-WxJ6hgFzrX0FcGQqNZhyRXgalglK24l3bmtFhBIQCK0RuxKzgEo__yp7MvWkNBoUW60gsXqqEqmi5gx_FCjNfCzCa0o"));
+			for( Address_components n : dw.getResult().getAddress_components()) {
+				System.out.println(n.getShort_name());
+			}
+		} catch (JsonSyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

@@ -1,17 +1,30 @@
 package org.snisarg.googleapi.tests;
 
+import java.io.IOException;
+
 import org.snisarg.googleapi.GooglePlaces;
 import org.snisarg.googleapi.model.nearby.NearbyWrapper;
 import org.snisarg.googleapi.model.nearby.Results;
 import org.snisarg.googleapi.query.NearbyQuery;
 
+import com.google.gson.JsonSyntaxException;
+
 public class TestNearby {
 
 	public static void main(String[] args) {
 		GooglePlaces gp = new GooglePlaces("Your key here");
-		NearbyWrapper nw = gp.query(new NearbyQuery(19.1146857, 72.8310232));
-		for(Results n : nw.getResults()) {
-			System.out.println(n.getName());
+		NearbyWrapper nw;
+		try {
+			nw = gp.query(new NearbyQuery(19.1146857, 72.8310232));
+			for(Results n : nw.getResults()) {
+				System.out.println(n.getName());
+			}
+		} catch (JsonSyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
