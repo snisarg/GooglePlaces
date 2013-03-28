@@ -6,6 +6,7 @@ import org.snisarg.googleapi.GooglePlaces;
 import org.snisarg.googleapi.model.nearby.NearbyWrapper;
 import org.snisarg.googleapi.model.nearby.Results;
 import org.snisarg.googleapi.query.NearbyQuery;
+import org.snisarg.googleapi.query.NearbyQuery.RankBy;
 
 import com.google.gson.JsonSyntaxException;
 
@@ -13,9 +14,10 @@ public class TestNearby {
 
 	public static void main(String[] args) {
 		GooglePlaces gp = new GooglePlaces("Your key here");
+		System.out.println("Hello!");
 		NearbyWrapper nw;
 		try {
-			nw = gp.query(new NearbyQuery(19.1146857, 72.8310232));
+			nw = gp.query(new NearbyQuery(19.1146857, 72.8310232).setRankby(RankBy.DISTANCE));
 			for(Results n : nw.getResults()) {
 				System.out.println(n.getName());
 			}
