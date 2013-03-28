@@ -23,8 +23,9 @@ public class NearbyQuery {
 		return rankby;
 	}
 
-	public void setRankby(RankBy rankby) {
+	public NearbyQuery setRankby(RankBy rankby) {
 		this.rankby = rankby;
+		return this;
 	}
 
 	public boolean isSensor() {
