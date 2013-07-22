@@ -5,7 +5,7 @@ All calls available in the Google Places API have not been added currently.
 
 Usage
 -----------
-Nearby Search Query:
+**Nearby Search Query:**
 
 	GooglePlaces gp = new GooglePlaces("Your key here");
 	NearbyWrapper nw;
@@ -16,7 +16,7 @@ Nearby Search Query:
 		}
 	} catch (Exception e) {...}
 
-Details Query:
+**Details Query:**
 
 	GooglePlaces gp = new GooglePlaces("Your key here");
 	DetailsWrapper dw;
@@ -27,7 +27,7 @@ Details Query:
 		}
 	} catch (Exception e) {...}
 
-Autocomplete Query:
+**Autocomplete Query:**
 
 	GooglePlaces gp = new GooglePlaces("Your key here");
 	AutocompleteWrapper aw;
@@ -37,7 +37,6 @@ Autocomplete Query:
 			System.out.println(p.getDescription());
 		}
 	} catch (Exception e) {...}
-
 
 Requirements
 ------------
