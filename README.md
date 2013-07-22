@@ -1,14 +1,12 @@
 Google Places API Wrapper for Java
 ===================================
 The library allows Java applications to use Google API calls directly instead of dealing with REST, JSON conversions and call syntaxes.
-
-Requirements
-------------
-GSON library. https://code.google.com/p/google-gson/
+All calls available in the Google Places API have not been added currently.
 
 Usage
 -----------
 Nearby Search Query:
+
 	GooglePlaces gp = new GooglePlaces("Your key here");
 	NearbyWrapper nw;
 	try {
@@ -17,7 +15,9 @@ Nearby Search Query:
 			System.out.println(n.getName());
 		}
 	} catch (Exception e) {...}
+
 Details Query:
+
 	GooglePlaces gp = new GooglePlaces("Your key here");
 	DetailsWrapper dw;
 	try {
@@ -26,7 +26,9 @@ Details Query:
 			System.out.println(n.getShort_name());
 		}
 	} catch (Exception e) {...}
+
 Autocomplete Query:
+
 GooglePlaces gp = new GooglePlaces("Your key here");
 	AutocompleteWrapper aw;
 	try {
@@ -35,3 +37,7 @@ GooglePlaces gp = new GooglePlaces("Your key here");
 			System.out.println(p.getDescription());
 		}
 	} catch (Exception e) {...}
+
+Requirements
+------------
+GSON library. https://code.google.com/p/google-gson/
