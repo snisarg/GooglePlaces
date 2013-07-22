@@ -29,7 +29,7 @@ Details Query:
 
 Autocomplete Query:
 
-GooglePlaces gp = new GooglePlaces("Your key here");
+	GooglePlaces gp = new GooglePlaces("Your key here");
 	AutocompleteWrapper aw;
 	try {
 		aw = gp.query(new AutocompleteQuery("kapa").setLatitude(19.1146857).setLongitude(72.8310232).setRadius(90000).setComponents("country:in"));
@@ -37,6 +37,7 @@ GooglePlaces gp = new GooglePlaces("Your key here");
 			System.out.println(p.getDescription());
 		}
 	} catch (Exception e) {...}
+
 
 Requirements
 ------------
